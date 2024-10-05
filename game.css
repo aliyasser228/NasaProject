@@ -1,0 +1,184 @@
+.game .container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+header,
+.video {
+  z-index: 96999;
+  position: relative;
+}
+.game h1 {
+  color: #2e7d32;
+}
+
+.game .stats {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.game .actions button {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.game .actions button:hover {
+  background-color: #43a047;
+}
+
+.game #message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #d32f2f;
+}
+
+/* body {
+  background-color: #e0f7fa;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+} */
+
+.game .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -88;
+  overflow: hidden;
+  background-image: url(images/Earths-Roatation.gif);
+  background-position: center;
+  background-size: cover;
+}
+
+.game .planet {
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  animation: float 0.5s infinite alternate;
+  background-color: transparent !important;
+}
+
+.game .character {
+  border-radius: 100px;
+  /* animation: float 0.5s forwards; */
+  width: 150px;
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+  /* استخدام GSAP لتحريك الشخصية */
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+
+.game .container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 50px auto;
+  position: relative;
+  z-index: 1;
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.game h1 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.game .stats {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.game .stats div {
+  margin: 10px 0;
+}
+
+.game .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game .actions button {
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.game .actions button img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  margin-left: 5px;
+  margin-right: 10px;
+  background-color: transparent !important;
+}
+
+.game .actions button:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+.game #message {
+  margin-top: 20px;
+  font-size: 1.3em;
+  color: #d32f2f;
+  min-height: 24px;
+}
+
+.home {
+  position: relative;
+  z-index: 9999;
+}
+footer {
+  position: relative;
+  z-index: 999;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elpioneers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg  ">
+        <div class="container justify-content-center">
+          <a class="navbar-brand " href="index.html" >
+            <img src="images/El Pioneers.svg" alt="">
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="climate.html">Climate Stories</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="maps.html">Global Map</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="ai.html">AI Assistant</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="game.html">Games</a>
+              </li>
+             
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class=" home map">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-6 text-light">
+                <h2>CLIMATE STORY</h2>
+            <h1>Game</h1>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="game my-5">
+      <div class="container">
+        <div class="background">
+          <img src="images/planet.svg" alt="الكوكب" class="planet animate__animated animate__fadeIn bg-light bg-light">
+          <img src="images/character.webp" alt="الشخصية" class="character" id="character">
+      </div>
+      <div class="container">
+          <h1 class="animate__animated animate__zoomIn">حافظ على الكوكب</h1>
+          <div class="stats">
+              <div>انبعاثات الكربون: <span id="carbon">100</span></div>
+              <div>درجة الحرارة: <span id="temperature">15</span>°C</div>
+              <div>السنة: <span id="year">2024</span></div>
+          </div>
+          <div class="actions">
+              <button onclick="performAction('renewable')" class="animate_animated animate_pulse">
+                  <img src="images/renewable.png" alt="طاقة متجددة">
+                  التحول إلى الطاقة المتجددة
+              </button>
+              <button onclick="performAction('plantTrees')" class="animate_animated animate_pulse">
+                  <img src="images/plant_trees.avif" alt="زراعة أشجار">
+                  زراعة الأشجار
+              </button>
+              <button onclick="performAction('reduceFossil')" class="animate_animated animate_pulse">
+                  <img src="images/reduce_fossil.png" alt="تقليل الوقود الأحفوري">
+                  تقليل الوقود الأحفوري
+              </button>
+              <button onclick="performAction('publicTransport')" class="animate_animated animate_pulse">
+                  <img src="images/public_transport.webp" alt="نقل عام">
+                  تعزيز النقل العام
+              </button>
+              <button onclick="performAction('recycle')" class="animate_animated animate_pulse">
+                  <img src="images/recycle.png" alt="إعادة تدوير">
+                  إعادة تدوير النفايات
+              </button>
+          </div>
+          <div id="message"></div>
+      </div>
+      </div>
+    </section>
+   
+    <footer>
+        <div class="container">
+          <div class="row">
+           <div><img src="images/El Pioneers.svg" alt="">
+            <p class="footer-subtitle">CLIMATE STORY</p></div>
+          
+            <hr style="border-top: 1px solid white;">
+            <p class="copyright">Copy Right ©Elpioneers</p>
+          </div>
+        </div>
+      </footer>
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="main.js"></script>
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+      Chatbot.init({
+          chatflowid: "b28fa49b-01df-422d-ba11-5751fd7f4a8c",
+          apiHost: "http://localhost:3000",
+      })
+  </script>
+  </body>
+</html>

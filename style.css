@@ -1,0 +1,299 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+.header {
+  background-color: #0f79a6;
+}
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+  font-size: 26px;
+  margin: 0 20px !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+/* /////////////// */
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  justify-content: start;
+  background-position: center;
+  background-size: cover;
+  background-image: url(./images/Earths-Roatation.gif);
+}
+.home h2 {
+  margin: 20px 0;
+  font-weight: 300;
+}
+.home h1 {
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+.home p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+button,
+.btn {
+  background-color: #0f79a6 !important;
+  color: #ffffff !important;
+  border: none !important ;
+  padding: 10px 20px !important;
+  border-radius: none !important;
+}
+/* //////thinkstyle//////// */
+.think h2 {
+  font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+.think {
+  margin-top: 150px;
+}
+/* /////liveStyle////// */
+.card-custom {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-custom img {
+  border-radius: 0 0 10px 10px;
+}
+.btn-custom {
+  background-color: #002233;
+  color: white;
+  border-radius: 5px;
+}
+
+.liveStyle .card-text {
+  font-size: 12px !important;
+}
+
+/* /////help///// */
+.card-overlay {
+  position: relative;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* تأثير التحويل */
+}
+
+.card-overlay:hover {
+  transform: translateY(-10px); /* التحرك لأعلى عند التمرير */
+}
+
+.card-overlay img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease; /* تأثير التحويل للصورة */
+}
+
+.card-overlay:hover img {
+  transform: scale(1.1); /* تكبير الصورة قليلاً عند التمرير */
+}
+
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  transition: opacity 0.3s ease; /* تأثير الشفافية */
+  opacity: 0.9; /* الشفافية الافتراضية */
+}
+
+.card-overlay:hover .card-content {
+  opacity: 1; /* زيادة الشفافية عند التمرير */
+}
+
+.card-content h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  max-width: 300px;
+  padding: 5px;
+}
+
+
+.arrow-btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.arrow-btn:hover {
+  background-color: #0f79a6;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.container-title {
+  margin-bottom: 30px;
+}
+/* ////footer///// */
+footer {
+  background-color: #006d88;
+  color: white;
+  padding: 10px 0;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-subtitle {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+footer img {
+  width: 80px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  color: #b0d3e3;
+}
+body {
+  background-image: url(images/bg.svg);
+  background-position: center;
+  background-size: contain;
+}
+/* map page */
+.map {
+  background-image: url(images/map.webp);
+}
+.maps {
+  background-color: aliceblue !important;
+  padding: 50px 0;
+}
+.cause p,
+.cause li {
+  padding: 10px;
+  font-size: 24px;
+  /* letter-spacing: 5px; */
+}
+.country img {
+  border-radius: 250px;
+  animation: rotateRight 5s linear infinite;
+}
+
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.image-section img {
+  max-width: 100%; /* تأكد من تناسب الصور مع حجم الحاوية */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  margin: 20px 0; /* إضافة مسافة بين الصور */
+}
+
+.resize-image {
+  width: 200px; /* تحديد عرض الصورة إلى 200 بكسل */
+  height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+  margin: 20px 0; /* إضافة مسافة بين الصور */
+}
+
+/* تأثير التحول عند التفاعل */
+.image-section img {
+  transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.05); /* تكبير الصورة عند التحويم */
+}
+
+.text {
+  background-color: white; /* لون خلفية القسم */
+  padding: 20px;
+  border-radius: 10px; /* زوايا مستديرة */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل */
+  max-width: 600px; /* الحد الأقصى لعرض القسم */
+  text-align: center; /* محاذاة النص إلى الوسط */
+  transform: translateX(390px); /* التحريك الابتدائي */
+  transition: transform 0.5s ease; /* تعيين الحركة عند التمرير */
+}
+
+/* تأثير الحركة عند التمرير فوق العنصر */
+.text:hover {
+  transform: translateX(390px) translateY(-10px); /* التحرك لأعلى قليلاً */
+}
+
+h2 {
+  color: #333; /* لون العنوان */
+}
+
+  /* تنسيق الحاوية */
+  .heading-container {
+    background-color: #f7f9fc; /* لون خلفية الحاوية */
+    padding: 30px; /* مسافة داخل الحاوية */
+    border-radius: 10px; /* زوايا مستديرة */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ظل */
+    max-width: 800px; /* الحد الأقصى لعرض الحاوية */
+    margin: 0 auto; /* المركز التلقائي */
+    text-align: center; /* محاذاة النص داخل الحاوية */
+}
+
+/* تنسيق عناصر h3 */
+h3 {
+    font-size: 1.5rem; /* حجم الخط */
+    color: #2c3e50; /* لون النص */
+    margin: 20px 0; /* مسافة فوق وتحت العنصر */
+    font-weight: bold; /* جعل النص عريض */
+    line-height: 1.4; /* ارتفاع السطر */
+    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثير سلس عند تغيير اللون أو التحجيم */
+}
+
+h3:hover {
+    color: #2980b9; /* لون النص عند التمرير */
+    transform: scale(1.05); /* تكبير النص عند التمرير */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0f79a6; /* لون الخط السفلي */
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1); /* تأثير الانميشن عند التمرير */
+}
+
+.nav-link:hover {
+  color: #ffffff; /* تغيير لون النص عند التمرير */
+}
